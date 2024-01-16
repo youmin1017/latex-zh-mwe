@@ -1,0 +1,68 @@
+\documentclass[12pt,a4paper]{article}
+
+% xeCJK
+\usepackage[]{xeCJK}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Times New Roman}
+\setmonofont{Times New Roman}
+\xeCJKDeclareSubCJKBlock{SIP}{
+    "73C9 -> "73C9, % 珉
+}
+% \setCJKmainfont[Path=fonts/]{NotoSerifTC-Regular.otf}
+\setCJKmainfont[]{Noto Serif TC}
+\setCJKmainfont[SIP, Path=fonts/]{NotoSerifTC-Regular-Subset.otf}
+\setCJKmonofont[]{Noto Serif TC}
+
+% Set image path
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+
+\usepackage[margin=2cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{float}
+\usepackage{url}
+
+\usepackage[backend=bibtex,sorting=nty]{biblatex}
+\addbibresource{ref.bib}
+
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+
+\newcommand{\subsubsubsection}[1]{\paragraph{#1}\mbox{}\\}
+\setcounter{secnumdepth}{4}
+
+
+\title{資訊工程學系碩士班甲組書面審查資料}
+\author{John Doe}
+\begin{document}
+\date{}
+\maketitle
+
+\tableofcontents
+
+\section{網路報名表}
+
+\section{大學歷年成績單(或最高學歷，含名次證明)}
+
+\input{chapter1.tex}
+
+\pagebreak
+\section{其他有助於入學審查之相關資料(如已發表論文、研究報告或作品)}
+
+% Image Example
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics*[width=\textwidth]{CPE.jpeg}
+%     \caption{CPE證明}
+%     \label{fig:cpe}
+% \end{figure}
+
+This is citation example\cite{ioi}
+
+\pagebreak
+\printbibliography
+
+\end{document}
